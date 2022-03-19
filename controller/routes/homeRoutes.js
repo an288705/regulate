@@ -1,8 +1,7 @@
-import { View, Text } from 'react-native'
 import React from 'react'
 import { useSelector } from 'react-redux'
 import HomeScreen from '../../view/home/homeScreen';
-import LoginScreen from '../../view/login/loginScreen'
+import Login from '../login';
 
 export default function homeRoutes() {
     const { acc } = useSelector(state=>state);
@@ -14,7 +13,7 @@ export default function homeRoutes() {
                 ?
                 <HomeScreen/>
                 :
-                <LoginScreen/>
+                <Login/>
             }
         </>
     )
