@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, StatusBar, TextInput, TouchableOpacity, Image} from 'react-native'
 import React from 'react'
 
-export default function loginScreen({setEmail,setPassword}) {
+export default function loginScreen({setEmail,setPassword,logIn}) {
   return (
     <View style={styles.container}>
       <Image style={styles.image} source={require("../../assets/calm.png")} />
@@ -29,7 +29,7 @@ export default function loginScreen({setEmail,setPassword}) {
         <Text style={styles.forgot_button}>Forgot Password?</Text>
       </TouchableOpacity>
  
-      <TouchableOpacity style={styles.loginBtn} /*onPress={}*/>
+      <TouchableOpacity style={styles.loginBtn} onPress={logIn}>
         <Text>Log In</Text>
       </TouchableOpacity>
     </View>

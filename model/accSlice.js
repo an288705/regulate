@@ -9,12 +9,16 @@ const slice = createSlice({
     jwt: "localStorage.getItem('jwt')",
     name: "",
     email: "",
+    role: "",
+    addictions: [],
+    goals: [],
+    routine: []
   },
   reducers: {
     signIn: (state, action) => {
       /*save the name and password from the state payload passed in. Pass in
             state, name, password into authenticator*/
-      const { _id, jwt, name, email } = action.payload;
+      const { _id, jwt, name, email, role, addictions, goals, routine } = action.payload;
 
     //   localStorage.setItem('loggedIn','true');
     //   localStorage.setItem('id',_id);
@@ -24,6 +28,10 @@ const slice = createSlice({
       state.jwt = jwt;
       state.name = name;
       state.email = email;
+      state.role = role;
+      state.addictions = addictions;
+      state.goals = goals;
+      state.routine = routine;
     },
     signOut: (state) => {
       //update local storage to false then convert LoggedIn and admin to bool
