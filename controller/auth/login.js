@@ -10,25 +10,28 @@ export default function login() {
     const dispatch = useDispatch();
 
     async function logIn(){
-        const account = await postLogin(email,password);
-        console.log(account);
+        const acc = await postLogin(email,password);
+        console.log(acc);
 
-        if(account.length>0)
+        if(!('error' in acc))
         {
             const credentials = {
-                _id : account._id,
-                jwt: account.jwt,
-                name: account.name,
-                email: account.email,
-                role: account.role,
-                addictions: account.addictions,
-                goal: account.goals,
-                routine: account.routine
+                _id : acc._id,
+                name: acc.name,
+                email: acc.email,
+                role: acc.role,
+                addictions: acc.addictions,
+                goal: acc.goals,
+                routine: acc.routine
             }
 
             console.log("to redux", credentials);
             dispatch(signIn(credentials));
-            console.log("User logged in is " + JSON.stringify(account));
+            console.log("User logged in is " + JSON.stringify(acc));
+        }
+        else
+        {
+            alert("Error: Username or Password Incorrect")
         }
     }
 
