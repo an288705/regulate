@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, StatusBar, TextInput, TouchableOpacity, Image} from 'react-native'
 import React from 'react'
 
-export default function loginScreen({setEmail,setPassword,logIn}) {
+export default function loginScreen({setEmail,setPassword,logIn,routeRegister}) {
   return (
     <View style={styles.container}>
       <Image style={styles.image} source={require("../../assets/calm.png")} />
@@ -31,6 +31,10 @@ export default function loginScreen({setEmail,setPassword,logIn}) {
  
       <TouchableOpacity style={styles.loginBtn} onPress={logIn}>
         <Text>Log In</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.createAccount} onPress={routeRegister}>
+        <Text>Create account</Text>
       </TouchableOpacity>
     </View>
   );
@@ -69,6 +73,10 @@ const styles = StyleSheet.create({
   forgot_button: {
     height: 30,
     marginBottom: 30,
+  },
+
+  createAccount: {
+    padding: 10
   },
  
   loginBtn: {

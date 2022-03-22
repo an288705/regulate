@@ -4,7 +4,7 @@ import { signIn } from "../../model/accSlice";
 import { postLogin } from '../http/postLogin';
 import LoginScreen from '../../view/auth/loginScreen'
 
-export default function login() {
+export default function Login({navigation}) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const dispatch = useDispatch();
@@ -35,12 +35,17 @@ export default function login() {
         }
     }
 
+    function routeRegister(){
+        navigation.push('Register')
+    }
+
     return (
         //give loginScreen all necessary functions
         <LoginScreen 
             setEmail={setEmail} 
             setPassword={setPassword}
             logIn={logIn}
+            routeRegister={routeRegister}
         />
     )
 }

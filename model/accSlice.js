@@ -17,7 +17,7 @@ const slice = createSlice({
     signIn: (state, action) => {
       /*save the name and password from the state payload passed in. Pass in
             state, name, password into authenticator*/
-      const { _id, jwt, name, email, role, addictions, goals, routine } = action.payload;
+      const { _id, name, email, role, addictions, goals, routine } = action.payload;
 
     //   localStorage.setItem('loggedIn','true');
     //   localStorage.setItem('id',_id);
