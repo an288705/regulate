@@ -13,7 +13,7 @@ export default function login() {
         const account = await postLogin(email,password);
         console.log(account);
 
-        if(account)
+        if(account.length>0)
         {
             const credentials = {
                 _id : account._id,
