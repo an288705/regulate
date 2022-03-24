@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, StatusBar, TextInput, TouchableOpacity, Image} from 'react-native'
 import React from 'react'
 
-export default function registerScreen({setEmail,setPassword,routeLogin}) {
+export default function registerScreen({setEmail,setPassword,register,routeLogin}) {
   return (
     <View style={styles.container}>
         <StatusBar style="auto" />
@@ -24,7 +24,7 @@ export default function registerScreen({setEmail,setPassword,routeLogin}) {
         />
         </View>
 
-        <TouchableOpacity style={styles.loginBtn} >
+        <TouchableOpacity style={styles.loginBtn} onPress={register}>
             <Text>Create Account</Text>
         </TouchableOpacity>
 

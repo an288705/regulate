@@ -15,6 +15,7 @@ export default function Login({navigation}) {
 
         if(!('error' in acc))
         {
+            //if !verified, ask user to verify email
             const credentials = {
                 _id : acc._id,
                 name: acc.name,
