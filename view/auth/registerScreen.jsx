@@ -6,22 +6,22 @@ export default function registerScreen({setEmail,setPassword,register,routeLogin
     <View style={styles.container}>
         <StatusBar style="auto" />
         <View style={styles.inputView}>
-        <TextInput
-            style={styles.TextInput}
-            placeholder="Email"
-            placeholderTextColor="black"
-            onChangeText={(e) => setEmail(e)}
-        />
+          <TextInput
+              style={styles.TextInput}
+              placeholder="Email"
+              placeholderTextColor="black"
+              onChangeText={(e) => setEmail(e)}
+          />
         </View>
 
         <View style={styles.inputView}>
-        <TextInput
-            style={styles.TextInput}
-            placeholder="Password"
-            placeholderTextColor="black"
-            secureTextEntry={true}
-            onChangeText={(e) => setPassword(e)}
-        />
+          <TextInput
+              style={styles.TextInput}
+              placeholder="Password"
+              placeholderTextColor="black"
+              secureTextEntry={true}
+              onChangeText={(e) => setPassword(e)}
+          />
         </View>
 
         <TouchableOpacity style={styles.loginBtn} onPress={register}>
