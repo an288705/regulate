@@ -44,9 +44,13 @@ const slice = createSlice({
     addAddiction: (state) => {
       const { addiction } = action.payload;
       state.addictions.push(addiction);
+    },
+    editAddiction: (state) =>{
+      const { name } = action.payload;
+      state.addictions.name = name;
     }
   }
 });
 
 export default slice.reducer;
-export const { signIn, signOut, addAddiction } = slice.actions;
+export const { signIn, signOut, addAddiction, editAddiction } = slice.actions;
