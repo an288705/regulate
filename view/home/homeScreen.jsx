@@ -5,6 +5,7 @@ import Addiction from '../../controller/home/addiction'
 export default function homeScreen() {
   return (
     <Addiction/>
+    //bump
   )
 }
 
